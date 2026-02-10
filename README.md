@@ -1,8 +1,8 @@
-# Nuxt 3
+# Nuxt 3 `nitro` Type Reproduction
 
 This package shows a reproduction of a type problem which was introduced in https://github.com/nuxt/nuxt/pull/34039.
 
-The `nitro` key was removed from the `ConfigSchema` type, which is used in the `defineNuxtConfig` function. This causes a type error when trying to use `nitro` in the config.
+The `nitro` key was removed from the `ConfigSchema` type, which is used in the `defineNuxtConfig` function. This causes a type error when trying to use `nitro` from the Nuxt config.
 
 ## Expected Behavior
 
