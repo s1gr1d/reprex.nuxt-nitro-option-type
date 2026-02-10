@@ -1,0 +1,50 @@
+{
+  "name": "my-module",
+  "version": "1.0.0",
+  "description": "My new Nuxt module",
+  "repository": "your-org/my-module",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/types.d.mts",
+      "import": "./dist/module.mjs"
+    }
+  },
+  "main": "./dist/module.mjs",
+  "typesVersions": {
+    "*": {
+      ".": [
+        "./dist/types.d.mts"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "workspaces": [
+    "playground"
+  ],
+  "scripts": {
+    "prepare": "nuxt-module-build prepare",
+    "typecheck-cli-only": "vue-tsc src/module.ts --noEmit --skipLibCheck",
+    "typecheck-with-dotNuxt": "vue-tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "@nuxt/kit": "^3.21.1"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "^3.1.1",
+    "@nuxt/eslint-config": "^1.14.0",
+    "@nuxt/module-builder": "^1.0.2",
+    "@nuxt/schema": "^3.21.1",
+    "@nuxt/test-utils": "^4.0.0",
+    "@types/node": "latest",
+    "changelogen": "^0.6.2",
+    "eslint": "^9.39.2",
+    "nuxt": "^3.21.1",
+    "typescript": "~5.9.3",
+    "vitest": "^4.0.18",
+    "vue-tsc": "^3.2.4"
+  }
+}
